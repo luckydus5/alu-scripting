@@ -11,7 +11,9 @@ def recurse(subreddit, hot_list=[], after=""):
     Queries the Reddit API recursively and returns the list of hot articles.
     """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    headers = {"User-Agent": "linux:alu.scripting:v1.0 (by /u/alu)"}
+    headers = {
+        "User-Agent": "python:api_advanced_2:v1.0.0 (by /u/johndoe_123)"
+    }
     params = {"after": after, "limit": 100}
 
     response = requests.get(url, headers=headers, params=params,
